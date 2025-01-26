@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Resume | Jaspher Custodio</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+		:root{
+			--font-medium: 500;
+			--font-semi-bold: 600;
+			--font-bold: 700;
+			
+			--first-color: #CC4B2C;
+			--first-color-dark: #662616;
+			--first-color-darken: #290F09;
+			--text-color: #54423D;
+			--first-color-light: #EAE7E6;
+			--first-color-lighten: #FFFAFA;
+			
+			--body-font: 'Poppins', sans-serif;
+			--h1-font-size: 1.5rem;
+			--h2-font-size: 1.25rem;
+			--h3-font-size: 1rem;
+			--normal-font-size: 0.938rem;
+			--small-font-size: 0.813rem;
+			--smaller-font-size: 0.75rem;
+			
+			--mb-1: 0.5rem;
+			--mb-2: 1rem;
+			--mb-3: 1.5rem;
+			--mb-4: 2rem;
+			--mb-5: 2.5rem;
+		}
+
+			@media screen and (min-width: 768px){
+				:root{
+				--h1-font-size: 2.25rem;
+				--h2-font-size: 1.5rem;
+				--h3-font-size: 1.25rem;
+				--normal-font-size: 1rem;
+				--small-font-size: 0.875rem;
+				--smaller-font-size: 0.813rem;
+				}
+			}
+			
+		*,::before,::after{
+			box-sizing: border-box;
+		}
+
+		body{
+			margin: 0;
+			font-family: var(--body-font);
+			font-size: var(--normal-font-size);
+			font-weight: var(--font-medium);
+			background-color: var(--first-color-lighten);
+			color: var(--text-color);
+		}
+
+		h1, h2, h3, p{
+			margin: 0;
+		}
+
+		h3{
+			font-weight: var(--font-semi-bold);
+		}
+
+		ul{
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+
+		img{
+			max-width: 100%;
+			height: auto;
+			display: block;
+		}
+		
+		.container{
+			height: 100vh;
+			display: grid;
+			grid-template-rows: 30% 30% 40%;
+			grid-template-columns: 30% 35% 35%;
+			grid-template-areas:
+				"contact-section about-section about-section"
+				"contact-section educations-section project-section"
+				"skills-section educations-section project-section"
+		}
+		
+		.section{
+			padding: 4rem 0 2rem;
+		}
+
+		.section-title{
+			font-size: var(--h1-font-size);
+			color: var(--first-color);
+			margin-bottom: var(--mb-3);
+			text-align: center;
+		}
+
+		.section-subtitle{
+			display: block;
+			font-size: var(--small-font-size);
+			color: var(--first-color-darken);
+			text-align: center;
+			font-weight: var(--font-bold);
+			margin-bottom: 0.25rem;
+		}
+				
+		.contact{
+			display: flex;
+			flex-direction: column;
+			padding: 10px;
+			background-color: var(--first-color-darken);
+			grid-area: contact-section;
+			justify-content: center;
+		}
+		
+		.skills{
+			display: flex;
+			flex-direction: column;
+			padding: 10px;
+			background-color: var(--first-color-darken);
+			grid-area: skills-section;
+		}
+		
+		.content{
+			color: var(--first-color-lighten);
+		}
+		
+		.about{
+			background-color: green;
+			grid-area: about-section;
+		}
+		
+		.educations{
+			background-color: pink;
+			grid-area: educations-section;
+		}
+		
+		.project{
+			grid-area: project-section;
+			background-color: gold;
+		}
+		
+		.centered{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			height: max-content;
+			text-align: center;
+		}
+		
+		.contact__img{
+			margin: 0 auto;
+			width: 160px;
+			height: 160px;
+			padding: 7px;
+			padding-left: 12px;
+			background-color: var(--first-color-light);
+			border-radius: 50%;
+			overflow: hidden;
+			margin-bottom: var(--mb-2);
+		}
+
+		.contact__img img{
+			width: 155px;
+		}
+
+		.contact__name{
+			font-size: var(--h1-font-size);
+			color: var(--first-color-light);
+			font-weight: var(--font-semi-bold);
+			margin-bottom: var(--mb-5);
+		}
+
+		.contact__information-data{
+			display: flex;
+			align-items: left;
+			color: var(--first-color-light);
+			margin-bottom: var(--mb-1);
+		}
+
+		.contact__information-icon{
+			font-size: var(--mb-3);
+			color: var(--first-color);
+			margin-right: var(--mb-2);
+		}
+		
+		.skills__information-data{
+			display: flex;
+			align-items: left;
+			font-size: var(--h2-font-size);
+			color: var(--first-color-lighten);
+			margin-bottom: var(--mb-3);
+		}
+
+		.skills__information-icon{
+			font-size: var(--mb-4);
+			color: var(--first-color);
+			margin-right: var(--mb-2);
+		}
+		
+		.skills__subtitle{
+			font-size: var(--h3-font-size);
+			color: var(--first-color-lighten);
+			margin-bottom: var(--mb-2);
+		}
+
+		.skills__data{
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			margin: 0 var(--mb-2);
+			margin-bottom: var(--mb-3);
+		}
+
+		.skills__name{
+			color: var(--first-color-light);
+			text-transform: uppercase;
+		}
+
+		.skills__bar{
+			position: absolute;
+			bottom: -0.75rem;
+			height: 0.25rem;
+			background-color: var(--first-color);
+		}
+		
+		.skills__number{
+			color: var(--first-color-light);
+		}
+
+		.skills__html{
+			width: 60%;
+		}
+
+		.skills__js{
+			width: 20%;
+		}
+		
+		.skills__python{
+			width: 70%;
+		}
+		
+		
+		.todo{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact section">
+			<div class="contact__img centered">
+				<img src="image/prefil.png" alt="">
+			</div>
+
+			<h1 class="contact__name centered">Jaspher Custodio</h1>
+		
+			<div class="contact__information">
+				<div class="contact__information-data">
+					<i class='bx bxs-briefcase contact__information-icon'></i>
+					<span>Front-End Developer</span>
+				</div>
+				
+				<div class="contact__information-data">
+					<i class='bx bxs-map contact__information-icon'></i>
+					<span>P. L. Tongohan Sr. Ave, St.</span>
+				</div>
+				
+				<div class="contact__information-data">
+					<i class='bx bxs-phone contact__information-icon'></i>
+					<span>+63 931 794 5345</span>
+				</div>
+
+				<div class="contact__information-data">
+					<i class='bx bxs-envelope contact__information-icon'></i>
+					<span>27jasphercustodio@gmail.com</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="skills section">
+			<div class="skills__information-data">
+				<i class='bx bxs-rocket skills__information-icon'></i>
+				<span>Skills</span>
+			</div>
+			
+			<h3 class="skills__subtitle">Front-End</h3>
+
+			<div class="skills__data">
+				<span class="skills__name">HTML/CSS</span>
+				<span class="skills__number">60%</span>
+				<span class="skills__bar skills__html"></span>
+			</div>
+
+			<div class="skills__data">
+				<span class="skills__name">JavaScript</span>
+				<span class="skills__number">20%</span>
+				<span class="skills__bar skills__js"></span>
+			</div>
+			
+			<h3 class="skills__subtitle">Back-End</h3>
+			
+			<div class="skills__data">
+				<span class="skills__name">Python</span>
+				<span class="skills__number">70%</span>
+				<span class="skills__bar skills__python"></span>
+			</div>
+		</div>
+		
+		<div class="about section">
+			<div class="about__information">
+				<h3 class="about__information-title">About</h3>
+				<p class="about__description">Hi, I'm a front-end developer passionate about crafting user-friendly, visually appealing interfaces and delivering engaging web experiences. I enjoy writing clean, efficient code and bringing designs to life with attention to detail. I'm always learning to stay updated with the latest trends and technologies in front-end development.</p>
+			</div>
+		</div>
+		
+        <div class="educations section">
+			<div class="todo">
+				<h3>Education</h3>
+			</div>
+		</div>
+		
+		<div class="project section">
+			<div class="todo">
+				<h3>Skills Summary</h3>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
