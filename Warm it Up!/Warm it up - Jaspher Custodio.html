@@ -84,8 +84,8 @@
 			grid-template-columns: 30% 35% 35%;
 			grid-template-areas:
 				"contact-section about-section about-section"
-				"contact-section educations-section project-section"
-				"skills-section educations-section project-section"
+				"contact-section education-section project-section"
+				"skills-section education-section project-section"
 		}
 		
 		.section{
@@ -137,13 +137,13 @@
 			grid-area: about-section;
 		}
 		
-		.educations{
+		.education{
 			display: flex;
 			flex-direction: column;
 			padding: 30px;
 			background-color: var(--first-color-lighten);
 			padding-top: 0;
-			grid-area: educations-section;
+			grid-area: education-section;
 		}
 		
 		.project{
@@ -266,7 +266,7 @@
 			align-items: center;
 			font-size: var(--h1-font-size);
 			color: var(--first-color);
-			margin-bottom: var(--mb-2);
+			margin-bottom: var(--mb-3);
 		}
 		
 		.about__information-icon{
@@ -287,31 +287,61 @@
 			align-items: center;
 		}
 		
-		.educations__information{
+		.education__information{
 			margin-bottom: var(--mb-4);
 		}
+		
+		.education__college{
+			margin-top: var(--mb-1);
+			color: var(--text-color);
+			margin-bottom: var(--mb-1);
+		}
+		
+		.education__speciality{
+			margin-bottom: var(--mb-3);
+			color: var(--text-color);
+			align-items: center;
+		}
 
-		.educations__information-data{
+		.education__information-data{
 			display: flex;
 			align-items: center;
 			font-size: var(--h1-font-size);
 			color: var(--first-color);
-			margin-bottom: var(--mb-2);
+			margin-bottom: var(--mb-3);
 		}
 		
-		.educations__information-icon{
+		.education__information-icon{
 			font-size: var(--mb-5);
 			color: var(--first-color);
 			margin-right: var(--mb-2);
 		}
 		
-		.educations__information-subtitle{
-			font-size: var(--h3-font-size);
-			color: var(--text-color);
-			margin-bottom: var(--mb-2);
+		.education__information-subicon{
+			font-size: var(--mb-3);
+			color: var(--first-color);
+			margin-right: var(--mb-2);
 		}
 		
+		.education__year{
+			display: flex;
+			align-items: center;
+			color: var(--first-color)
+		}
 		
+		.current__year{
+			background-color: var(--first-color);
+			padding: 3px;
+			color: white;
+			border-radius: 4px;
+		}
+		
+		.education__year-space{
+			display: inline-block;
+			margin-right: var(--mb-1);
+		}
+		
+	
 		
 		.todo{
 			display: flex;
@@ -396,13 +426,39 @@
 			</div>
 		</div>
 		
-        <div class="educations section">
-			<div class="educations__information">
-				<div class="educations__information-data">
-					<i class='bx bx-library educations__information-icon'></i>
+        <div class="education section">
+			<div class="education__information">
+				<div class="education__information-data">
+					<i class='bx bx-library education__information-icon'></i>
 					<span>Education</span>
 				</div>
-				<h3 class="educations__information-subtitle">Personalite Text</h3>
+				<div class="education__year">
+					<i class='bx bx-calendar education__information-subicon'></i>
+					<h3 class="education__year-space">2022 - </h3>
+					<h3 class="current__year">present</h3>
+				</div>
+				<div>
+					<h3 class="education__college">East Systems Colleges of Rizal</h3>
+					<p class="education__speciality">Bachelor of Science in Information Technology</p>
+				</div>
+				
+				<div class="education__year">
+					<i class='bx bx-calendar education__information-subicon'></i>
+					<h3>2018 - 2020</h3>
+				</div>
+				<div>
+					<h3 class="education__college">Saint John-Hill Academy</h3>
+					<p class="education__speciality">Science, Technology Engineering, and Mathematics</p>
+				</div>
+				
+				<div class="education__year">
+					<i class='bx bx-calendar education__information-subicon'></i>
+					<h3>2017</h3>
+				</div>
+				<div>
+					<h3 class="education__college">Philippine Technological Institute of Science Arts and Trade and Jaken Computer Learning Services</h3>
+					<p class="education__speciality">Computer Fundamentals with Business Application Software, Photoshop, Basic Web Design and Intro to Internet</p>
+				</div>
 			</div>
 		</div>
 		
