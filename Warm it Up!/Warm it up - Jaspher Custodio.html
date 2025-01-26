@@ -80,7 +80,7 @@
 		.container{
 			height: 100vh;
 			display: grid;
-			grid-template-rows: 30% 30% 40%;
+			grid-template-rows: 30% 25% 45%;
 			grid-template-columns: 30% 35% 35%;
 			grid-template-areas:
 				"contact-section about-section about-section"
@@ -130,16 +130,24 @@
 		}
 		
 		.about{
-			background-color: green;
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+			background-color: var(--first-color-lighten);
 			grid-area: about-section;
 		}
 		
 		.educations{
-			background-color: pink;
+			display: flex;
+			flex-direction: column;
+			padding: 30px;
+			background-color: var(--first-color-lighten);
+			padding-top: 0;
 			grid-area: educations-section;
 		}
 		
 		.project{
+			padding-top: 0;
 			grid-area: project-section;
 			background-color: gold;
 		}
@@ -177,7 +185,7 @@
 
 		.contact__information-data{
 			display: flex;
-			align-items: left;
+			align-items: center;
 			color: var(--first-color-light);
 			margin-bottom: var(--mb-1);
 		}
@@ -188,9 +196,13 @@
 			margin-right: var(--mb-2);
 		}
 		
+		.skills__information{
+			margin-bottom: var(--mb-2);
+		}
+		
 		.skills__information-data{
 			display: flex;
-			align-items: left;
+			align-items: center;
 			font-size: var(--h2-font-size);
 			color: var(--first-color-lighten);
 			margin-bottom: var(--mb-3);
@@ -244,6 +256,62 @@
 			width: 70%;
 		}
 		
+		.about__information{
+			margin-bottom: var(--mb-4);
+			align-content: center;
+		}
+
+		.about__information-data{
+			display: flex;
+			align-items: center;
+			font-size: var(--h1-font-size);
+			color: var(--first-color);
+			margin-bottom: var(--mb-2);
+		}
+		
+		.about__information-icon{
+			font-size: var(--mb-5);
+			color: var(--first-color);
+			margin-right: var(--mb-2);
+		}
+		
+		.about__information-subtitle{
+			font-size: var(--h3-font-size);
+			color: var(--text-color);
+			margin-bottom: var(--mb-2);
+		}
+		
+		.about__description{
+			margin-bottom: var(--mb-4);
+			color: var(--text-color);
+			align-items: center;
+		}
+		
+		.educations__information{
+			margin-bottom: var(--mb-4);
+		}
+
+		.educations__information-data{
+			display: flex;
+			align-items: center;
+			font-size: var(--h1-font-size);
+			color: var(--first-color);
+			margin-bottom: var(--mb-2);
+		}
+		
+		.educations__information-icon{
+			font-size: var(--mb-5);
+			color: var(--first-color);
+			margin-right: var(--mb-2);
+		}
+		
+		.educations__information-subtitle{
+			font-size: var(--h3-font-size);
+			color: var(--text-color);
+			margin-bottom: var(--mb-2);
+		}
+		
+		
 		
 		.todo{
 			display: flex;
@@ -290,39 +358,51 @@
 				<span>Skills</span>
 			</div>
 			
-			<h3 class="skills__subtitle">Front-End</h3>
+			<div class="skills__information">
+				<h3 class="skills__subtitle">Front-End</h3>
 
-			<div class="skills__data">
-				<span class="skills__name">HTML/CSS</span>
-				<span class="skills__number">60%</span>
-				<span class="skills__bar skills__html"></span>
-			</div>
+				<div class="skills__data">
+					<span class="skills__name">HTML/CSS</span>
+					<span class="skills__number">60%</span>
+					<span class="skills__bar skills__html"></span>
+				</div>
 
-			<div class="skills__data">
-				<span class="skills__name">JavaScript</span>
-				<span class="skills__number">20%</span>
-				<span class="skills__bar skills__js"></span>
+				<div class="skills__data">
+					<span class="skills__name">JavaScript</span>
+					<span class="skills__number">20%</span>
+					<span class="skills__bar skills__js"></span>
+				</div>
 			</div>
 			
-			<h3 class="skills__subtitle">Back-End</h3>
-			
-			<div class="skills__data">
-				<span class="skills__name">Python</span>
-				<span class="skills__number">70%</span>
-				<span class="skills__bar skills__python"></span>
+			<div class="skills__information">
+				<h3 class="skills__subtitle">Back-End</h3>
+				
+				<div class="skills__data">
+					<span class="skills__name">Python</span>
+					<span class="skills__number">70%</span>
+					<span class="skills__bar skills__python"></span>
+				</div>
 			</div>
 		</div>
 		
 		<div class="about section">
 			<div class="about__information">
-				<h3 class="about__information-title">About</h3>
-				<p class="about__description">Hi, I'm a front-end developer passionate about crafting user-friendly, visually appealing interfaces and delivering engaging web experiences. I enjoy writing clean, efficient code and bringing designs to life with attention to detail. I'm always learning to stay updated with the latest trends and technologies in front-end development.</p>
+				<div class="about__information-data">
+					<i class='bx bxs-certification about__information-icon'></i>
+					<span>Key Summary</span>
+				</div>
+				<h3 class="about__information-subtitle">Personalite Text</h3>
+				<p class="about__description">Hi I'm Jaspher Custodio, a front-end developer passionate about crafting user-friendly, visually appealing interfaces and delivering engaging web experiences. I enjoy writing clean, efficient code and bringing designs to life with attention to detail. I'm always learning to stay updated with the latest trends and technologies in front-end development.</p>
 			</div>
 		</div>
 		
         <div class="educations section">
-			<div class="todo">
-				<h3>Education</h3>
+			<div class="educations__information">
+				<div class="educations__information-data">
+					<i class='bx bx-library educations__information-icon'></i>
+					<span>Education</span>
+				</div>
+				<h3 class="educations__information-subtitle">Personalite Text</h3>
 			</div>
 		</div>
 		
