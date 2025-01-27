@@ -38,9 +38,9 @@ This project is a practice activity aimed at:
 
 ## Contact
 Feel free to reach out to me for feedback or collaboration opportunities:
-- **Email**: [your.email@example.com](27jasphercustodio@gmail.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/jaspher-custodio-9b1915199/)
-- **GitHub**: [Your GitHub Profile](https://github.com/JaspherCustodio)
+- **Email**: [27jasphercustodio@gmail.com](27jasphercustodio@gmail.com)
+- **LinkedIn**: [Jaspher Custodio](https://www.linkedin.com/in/jaspher-custodio-9b1915199/)
+- **GitHub**: [JaspherCustodio](https://github.com/JaspherCustodio)
 
 ---
 Thank you for checking out my project!
