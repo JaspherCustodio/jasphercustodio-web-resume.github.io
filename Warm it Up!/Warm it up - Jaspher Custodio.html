@@ -47,9 +47,15 @@
 		*,::before,::after{
 			box-sizing: border-box;
 		}
+		
+		body, html{
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
 
 		body{
-			margin: 0;
 			font-family: var(--body-font);
 			font-size: var(--normal-font-size);
 			font-weight: var(--font-medium);
@@ -65,12 +71,6 @@
 			font-weight: var(--font-semi-bold);
 		}
 
-		ul{
-			margin: 0;
-			padding: 0;
-			text-decoration: none;
-		}
-
 		img{
 			max-width: 100%;
 			height: auto;
@@ -78,14 +78,15 @@
 		}
 		
 		.container{
-			height: 100vh;
 			display: grid;
-			grid-template-rows: 30% 25% 45%;
-			grid-template-columns: 30% 35% 35%;
+			grid-template-rows: 20% 14% 16% 25% 25%;
+			grid-template-columns: auto;
 			grid-template-areas:
-				"contact-section about-section about-section"
-				"contact-section education-section project-section"
-				"skills-section education-section project-section"
+				"contact-section"
+				"about-section"
+				"skills-section"
+				"education-section"
+				"project-section"
 		}
 		
 		.section{
@@ -111,7 +112,7 @@
 		.contact{
 			display: flex;
 			flex-direction: column;
-			padding: 10px;
+			padding: 30px;
 			background-color: var(--first-color-darken);
 			grid-area: contact-section;
 			justify-content: center;
@@ -120,7 +121,7 @@
 		.skills{
 			display: flex;
 			flex-direction: column;
-			padding: 10px;
+			padding: 30px;
 			background-color: var(--first-color-darken);
 			grid-area: skills-section;
 		}
@@ -142,7 +143,6 @@
 			flex-direction: column;
 			padding: 30px;
 			background-color: var(--first-color-lighten);
-			
 			grid-area: education-section;
 		}
 		
@@ -151,7 +151,6 @@
 			flex-direction: column;
 			padding: 30px;
 			background-color: var(--first-color-lighten);
-			
 			grid-area: project-section;
 		}
 		
@@ -183,7 +182,7 @@
 			font-size: var(--h1-font-size);
 			color: var(--first-color-lighten);
 			font-weight: var(--font-semi-bold);
-			margin-bottom: var(--mb-5);
+			margin-bottom: var(--mb-2);
 		}
 
 		.contact__information-data{
@@ -352,7 +351,7 @@
 	
 		.project__img{
 			margin: 0 auto;
-			width: 400px;
+			width: 300px;
 			overflow: hidden;
 			border-radius: 0.5rem;
 		}
@@ -402,9 +401,40 @@
 		.footer__copy{
 			display: flex;
 			font-size: var(--smaller-font-size);
-			color: var(--text-color);
+			color: var(--first-color-darken);
 			justify-content: center;
 		}
+		
+		@media screen and (min-width: 768px){
+			body, html{
+				overflow-y: hidden;
+			}
+			
+			.container{
+				height: 100vh;
+				display: grid;
+				grid-template-rows: 30% 25% 45%;
+				grid-template-columns: 30% 35% 35%;
+				grid-template-areas:
+					"contact-section about-section about-section"
+					"contact-section education-section project-section"
+					"skills-section education-section project-section"
+			}
+			
+			.contact__name{
+				margin-bottom: var(--mb-5);
+			}
+			
+			.footer__copy{
+				display: flex;
+				font-size: var(--smaller-font-size);
+				color: var(--text-color);
+				justify-content: center;
+			}
+			
+			.project__img{
+				width: 400px;
+			}
     </style>
 </head>
 <body>
@@ -526,7 +556,7 @@
 				<img src="image/work1.jpg" alt="">
 				<h3 class="project__title">Godot Authentication System</h3>
 			</div>
-			<div class="about__project">
+			<div class="about__project centered">
 				<i class='bx bx-link project__information-subicon'></i>
 				<p>https://github.com/JaspherCustodio/Godot-Login-Signup</p>
 			</div>
