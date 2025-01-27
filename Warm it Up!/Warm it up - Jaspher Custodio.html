@@ -33,7 +33,7 @@
 			--mb-5: 2.5rem;
 		}
 
-			@media screen and (min-width: 768px){
+			@media screen and (min-width: 650px){
 				:root{
 				--h1-font-size: 2.25rem;
 				--h2-font-size: 1.5rem;
@@ -136,6 +136,7 @@
 			padding: 30px;
 			background-color: var(--first-color-lighten);
 			grid-area: about-section;
+			justify-content: flex-end;
 		}
 		
 		.education{
@@ -196,6 +197,12 @@
 			font-size: var(--mb-3);
 			color: var(--first-color);
 			margin-right: var(--mb-2);
+		}
+		
+		.gmail{
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+			white-space: normal;
 		}
 		
 		.skills__information{
@@ -405,6 +412,12 @@
 			justify-content: center;
 		}
 		
+		#footer{
+			margin-top: 40px;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		
 		@media screen and (min-width: 768px){
 			body, html{
 				overflow-y: hidden;
@@ -433,8 +446,23 @@
 			}
 			
 			.project__img{
-				width: 400px;
+				width: 200px;
 			}
+			
+			#footer{
+				color: var(--first-color-lighten);
+			}
+		}
+		
+		@media screen and (min-width: 1280px){
+			body, html{
+				overflow-y: hidden;
+			}
+			
+			.project__img{
+				width: 300px;
+			}
+		}
     </style>
 </head>
 <body>
@@ -464,7 +492,7 @@
 
 				<div class="contact__information-data">
 					<i class='bx bxs-envelope contact__information-icon'></i>
-					<span>27jasphercustodio@gmail.com</span>
+					<span class="gmail">27jasphercustodio@gmail.com</span>
 				</div>
 			</div>
 		</div>
@@ -554,9 +582,9 @@
 			</div>
 			<div class="project__img centered">
 				<img src="image/work1.jpg" alt="">
-				<h3 class="project__title">Godot Authentication System</h3>
 			</div>
 			<div class="about__project centered">
+				<h3 class="project__title">Godot Authentication System</h3>
 				<i class='bx bx-link project__information-subicon'></i>
 				<p>https://github.com/JaspherCustodio/Godot-Login-Signup</p>
 			</div>
@@ -570,6 +598,8 @@
 					<h3>SQLite</h3>
 				</div>
 			</div>
+			
+			<p class="footer__copy" id="footer">© 2025 Jaspher. All rights reserved.</p>
 		</div>	
 	</div>
 </body>
